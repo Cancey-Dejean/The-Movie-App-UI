@@ -1,16 +1,24 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html, body, h1, img, etc */
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+
+  header {
+    @apply fixed top-0 w-full z-50 transition-all duration-[.4s] ease-in-out py-[24px];
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+/* Custom Classes */
+@layer components {
+  .wrapper {
+    max-width: 1717px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 }
