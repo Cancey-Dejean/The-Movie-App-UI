@@ -1,6 +1,8 @@
+import axios from "axios"
 import Head from "next/head"
 import Image from "next/image"
 import Banner from "../components/Banner"
+// import { server } from "../utils/requests"
 
 export default function Home() {
   return (
@@ -16,3 +18,14 @@ export default function Home() {
     </div>
   )
 }
+
+// export async function getStaticProps() {
+//   const res = await axios(
+//     `${server}/trending/all/week?api_key=${process.env.API_KEY}&language=en-US`
+//   )
+//   const movies = res.data
+
+//   return {
+//     props: { movies },
+//   }
+// }

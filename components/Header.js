@@ -32,8 +32,8 @@ const Header = () => {
           <button type="button" className="">
             <Image
               src="https://cdn.shopify.com/s/files/1/0517/8146/8354/files/avatar.jpg?v=1656370571"
-              height={66}
-              width={66}
+              height={45}
+              width={45}
               alt="avatar"
               className="object-cover h-[66px] w-[66px] rounded-[50%]"
               priority={true}
