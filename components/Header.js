@@ -5,25 +5,25 @@ const Header = () => {
   return (
     <header className="">
       <div className="flex items-center justify-between wrapper">
-        <ul className="hidden space-x-4 md:flex">
+        <ul className="hidden space-x-[50px] md:flex">
           <li className="menu-item">
             <Link href="/">
-              <a>Home</a>
+              <a className="menu-link">Home</a>
             </Link>
           </li>
           <li className="menu-item">
             <Link href="/">
-              <a>Movies</a>
+              <a className="menu-link">Movies</a>
             </Link>
           </li>
           <li className="menu-item">
             <Link href="/">
-              <a>Series</a>
+              <a className="menu-link">Series</a>
             </Link>
           </li>
           <li className="menu-item">
             <Link href="/">
-              <a>Kids</a>
+              <a className="menu-link">Kids</a>
             </Link>
           </li>
         </ul>

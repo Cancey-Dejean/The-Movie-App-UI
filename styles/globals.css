@@ -16,9 +16,18 @@
 /* Custom Classes */
 @layer components {
   .wrapper {
-    max-width: 1717px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+    @apply max-w-[1717px] w-full mx-auto px-[15px];
+  }
+
+  .menu-item {
+    @apply text-[28px] leading-[1] tracking-[2px] uppercase;
+  }
+
+  .menu-link {
+    @apply py-[43px] hover:opacity-75 transition duration-[.3s];
+  }
+
+  .banner-btn {
+    @apply cursor-pointer gap-x-2 text-center rounded-[44px] px-[36px] py-[20px] uppercase text-[28px] leading-[1] tracking-[2] font-bold transition ease-in-out duration-[.3s];
   }
 }
