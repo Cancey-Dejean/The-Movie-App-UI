@@ -5,6 +5,6 @@
 
 module.exports = {
   images: {
-    domains: ["cdn.shopify.com", "static1.srcdn.com"],
+    domains: ["cdn.shopify.com", "static1.srcdn.com", "image.tmdb.org"],
   },
 }
