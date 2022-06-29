@@ -30,4 +30,16 @@
   .banner-btn {
     @apply cursor-pointer inline-block gap-x-2 text-center rounded-[44px] px-[36px] py-[20px] uppercase text-[20px] leading-[1] tracking-[2] font-bold transition ease-in-out duration-[.3s];
   }
+
+  .splide__arrow {
+    @apply absolute top-[50%] transform translate-y-[-50%];
+  }
+
+  .splide__arrow--prev {
+    @apply left-[15px];
+  }
+
+  .splide__arrow--next {
+    @apply right-[15px];
+  }
 }

@@ -16,11 +16,11 @@ const CategoryCard = ({
             alt={categoryTitle}
           />
           <div className="absolute bg-gradient-to-t left-0 top-0 w-full h-full flex flex-col items-center justify-center z-10">
-            <div className="transform transition duration-[.3s] ease-in-out translate-y-[20px]  group-hover:translate-y-[0]">
+            <div className="transform transition duration-[.6s] ease-in-out translate-y-[20px]  group-hover:translate-y-[0]">
               <h4 className="text-[30px] font-extrabold leading-[1.2]">
                 {categoryTitle}
               </h4>
-              <h5 className="w-full opacity-0 group-hover:opacity-100 z-10 text-center transition duration-[.3s] ease-in-out">
+              <h5 className="w-full opacity-0 group-hover:opacity-100 z-10 text-center transition duration-[.7s] group-hover:delay-[200ms] ease-in-out">
                 {`${categorgyNum}` + " " + "Titles"}
               </h5>
             </div>
