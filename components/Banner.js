@@ -31,10 +31,14 @@ const Banner = () => {
         className="absolute top-0 -z-[1] left-0 object-cover"
       />
       <div className="wrapper">
-        <div className="relative min-h-[900px] pt-[200px] flex flex-col justify-center">
-          <h1 className=" font-black text-[100px] leading-[.9em] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[41px]">
+        <div className="relative min-h-[900px] pt-[50px] flex flex-col justify-center">
+          <h1 className=" font-black text-[80px] leading-[.9em] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px]">
             {movie?.title || movie?.name || movie?.orginal_name}
           </h1>
+
+          <p className="text-[20px] leading-7 mb-[41px] max-w-[700px]">
+            {movie.overview}
+          </p>
 
           <div className="group">
             <div className="flex space-x-3">

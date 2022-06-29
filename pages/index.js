@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Banner from "../components/Banner"
+import ContinueWatching from "../components/ContinueWatching"
 import ImageRow from "../components/ImageRow"
 import requests from "../utils/requests"
 
@@ -15,10 +16,13 @@ export default function Home() {
       {/* Banner */}
       <Banner />
 
+      {/* Continue Watching */}
+      <ContinueWatching />
+
       {/* List */}
-      <div className="pb-[80px]">
+      <div className="pt-[100px] pb-[100px]">
         <ImageRow title="My List" fetchUrl={requests.fetchTopRated} />
-        <ImageRow title="Popular" fetchUrl={requests.fetchTrending} />
+        <ImageRow title="Popular" fetchUrl={requests.fetchNowPlaying} />
         <ImageRow title="Coming soon" fetchUrl={requests.fetchUpcoming} />
       </div>
     </div>

@@ -1,9 +1,34 @@
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
 const Header = () => {
+  // State
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    // On Mount
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
   return (
-    <header className="">
+    <header
+      className={`${
+        isScrolled &&
+        "bg-black shadow-[0_10px_30px_-15px_rgba(255,255,255,0.1)] py-3"
+      }`}
+    >
       <div className="flex items-center justify-between wrapper">
         <ul className="hidden space-x-[30px] md:flex">
           <li className="menu-item">

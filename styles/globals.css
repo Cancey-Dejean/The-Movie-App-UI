@@ -20,7 +20,7 @@
   }
 
   .menu-item {
-    @apply text-[18px] leading-[1] tracking-[2px] uppercase;
+    @apply text-[16px] leading-[1] tracking-[2px] uppercase;
   }
 
   .menu-link {
@@ -29,6 +29,10 @@
 
   .banner-btn {
     @apply cursor-pointer inline-block gap-x-2 text-center rounded-[44px] px-[36px] py-[20px] uppercase text-[20px] leading-[1] tracking-[2] font-bold transition ease-in-out duration-[.3s];
+  }
+
+  .image-row .splide__track {
+    overflow: inherit;
   }
 
   .splide__arrow {

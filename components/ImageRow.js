@@ -22,9 +22,11 @@ const ImageRow = ({ title, fetchUrl }) => {
 
   console.log(movies)
   return (
-    <section className="mt-[60px]">
-      <div className="wrapper">
-        <h4 className="text-[20px] mb-[20px]">{title}</h4>
+    <section className="mt-[50px] image-row">
+      <div className="wrapper overflow-x-hidden">
+        <h4 className="text-[20px] mb-[20px] font-bold leading-[1.2]">
+          {title}
+        </h4>
 
         <div className="group">
           <Splide
@@ -40,12 +42,11 @@ const ImageRow = ({ title, fetchUrl }) => {
           >
             <SplideTrack>
               {movies.map((movie) => (
-                <SplideSlide>
-                  <Link
-                    href="#"
-                    className="relative cursor-pointer transition duration-200 ease-out md:h-36 md:min-w-[180px] md:hover:scale-105"
-                    key={movie.id}
-                  >
+                <SplideSlide
+                  className="transform transition duration-[.3s] ease-in-out hover:translate-y-[-10px] group bg-gradient-to-t"
+                  key={movie.id}
+                >
+                  <Link href="#" className="relative cursor-pointer">
                     <a>
                       <img
                         src={`${base_url}${
