@@ -13,7 +13,7 @@ const CategoryCard = ({
           <img
             src={categoryImg}
             className=" object-cover object-center -z-[1] h-full w-full rounded-[25px]"
-            alt=""
+            alt={categoryTitle}
           />
           <div className="absolute bg-gradient-to-t left-0 top-0 w-full h-full flex flex-col items-center justify-center z-10">
             <div className="transform transition duration-[.3s] ease-in-out translate-y-[20px]  group-hover:translate-y-[0]">

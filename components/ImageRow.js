@@ -1,24 +1,55 @@
 import Image from "next/image"
-import React from "react"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import Link from "next/link"
+// import Image from "next/image"
 
-const ImageRow = () => {
+const ImageRow = ({ title, fetchUrl }) => {
+  const [movies, setMovies] = useState([])
+  const base_url = "https://image.tmdb.org/t/p/original/"
+
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(fetchUrl)
+      setMovies(request.data.results)
+
+      return request
+    }
+
+    fetchData()
+  }, [fetchUrl])
+
+  console.log(movies)
   return (
-    <div>
-      <div>
-        <h4>Title</h4>
+    <section className="mt-[60px]">
+      <div className="wrapper">
+        <h4 className="text-[20px] mb-[20px]">{title}</h4>
 
-        <div className="div">
-          <div className="relative h-[433px]">
-            <Image
-              width={700}
-              height={433}
-              src="https://cdn.shopify.com/s/files/1/0517/8146/8354/files/bigImage1.jpg?v=1655419957"
-              className="object-cover"
-            />
-          </div>
+        <div className="relative flex gap-x-[10px]">
+          {movies.map(
+            (movie, index) =>
+              index <= 9 && (
+                <Link
+                  href="#"
+                  className="relative cursor-pointer transition duration-200 ease-out md:h-36 md:min-w-[180px] md:hover:scale-105"
+                  key={movie.id}
+                >
+                  <a>
+                    <img
+                      src={`${base_url}${
+                        movie.poster_path || movie.backdrop_path
+                      }`}
+                      className="rounded-sm h-[250px] w-full object-cover md:rounded"
+                      alt={movie.original_title}
+                      loading="lazy"
+                    />
+                  </a>
+                </Link>
+              )
+          )}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="">
       <div className="flex items-center justify-between wrapper">
-        <ul className="hidden space-x-[50px] md:flex">
+        <ul className="hidden space-x-[30px] md:flex">
           <li className="menu-item">
             <Link href="/">
               <a className="menu-link">Home</a>
