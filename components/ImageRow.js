@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Link from "next/link"
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css/core"
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/solid"
+import MovieCard from "./MovieCard"
 
 const ImageRow = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([])
@@ -20,7 +20,12 @@ const ImageRow = ({ title, fetchUrl }) => {
     fetchData()
   }, [fetchUrl])
 
-  console.log(movies)
+  // handle click function
+  const handleModal = () => {
+    let body = document.querySelector("body")
+    body.classList.add("modal-open")
+  }
+
   return (
     <section className="mt-[50px] image-row">
       <div className="wrapper overflow-x-hidden">
@@ -43,21 +48,14 @@ const ImageRow = ({ title, fetchUrl }) => {
             <SplideTrack>
               {movies.map((movie) => (
                 <SplideSlide
-                  className="transform transition duration-[.3s] ease-in-out hover:translate-y-[-10px] group bg-gradient-to-t"
+                  className="transform transition duration-[.3s] ease-in-out hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
                   key={movie.id}
                 >
-                  <Link href="#" className="relative cursor-pointer">
-                    <a>
-                      <img
-                        src={`${base_url}${
-                          movie.poster_path || movie.backdrop_path
-                        }`}
-                        className="rounded-[10px] h-[250px] w-full object-cover"
-                        alt={movie.original_title}
-                        loading="lazy"
-                      />
-                    </a>
-                  </Link>
+                  <MovieCard
+                    handleModal={handleModal}
+                    movie={movie}
+                    base_url={base_url}
+                  />
                 </SplideSlide>
               ))}
             </SplideTrack>

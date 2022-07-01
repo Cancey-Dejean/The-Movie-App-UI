@@ -21,7 +21,6 @@ const ContinueWatching = () => {
     fetchData()
   }, []) // Only when mounts
 
-  console.log(movie)
   return (
     <div className="mt-[250px]">
       <div className="wrapper">
@@ -30,14 +29,14 @@ const ContinueWatching = () => {
             <h3 className="text-[40px] mb-[30px] font-bold leading-[1.2]">
               Continue Watching
             </h3>
-            <button className="group">
+            <button className="group w-full bg-gradient-to-t">
               <div className="relative">
-                <div className="relative rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)]">
+                <div className="relative h-[450px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)]">
                   <img
                     src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                     alt=""
                     loading="lazy"
-                    className="transform scale-1 group-hover:scale-[1.3] duration-[.8s] ease-in-out"
+                    className="absolute transform scale-1 -z-[1] group-hover:scale-[1.3] duration-[.8s] ease-in-out"
                   />
                   <div className="absolute h-[25px] bottom-0 left-0 w-full bg-white/30">
                     <div className="w-[50%] rounded-r-[35px] bg-white">
@@ -68,7 +67,7 @@ const ContinueWatching = () => {
               Rating:{" "}
               <span>
                 <h5 className="bg-white text-black p-1 font-bold rounded-[3px]">
-                  {movie.vote_average}
+                  ⭐ {movie.vote_average}/10
                 </h5>
               </span>
             </div>

@@ -3,6 +3,7 @@ import Image from "next/image"
 import axios from "axios"
 import requests from "../utils/requests"
 import CategoryCard from "./CategoryCard"
+import ButtonGroup from "./ButtonGroup"
 
 const Banner = () => {
   const [movie, setMovie] = useState([])
@@ -40,16 +41,7 @@ const Banner = () => {
             {movie.overview}
           </p>
 
-          <div className="group">
-            <div className="flex space-x-3">
-              <button className="banner-btn bg-[#8400FF] hover:bg-[#6100BD]">
-                play now
-              </button>
-              <button className="banner-btn bg-white text-black hover:bg-[#B3B3B3] hover:text-black">
-                watch list
-              </button>
-            </div>
-          </div>
+          <ButtonGroup primaryText="Play Now" secondaryText="watch list" />
         </div>
 
         <div className="flex gap-x-[50px]">

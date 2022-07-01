@@ -1,4 +1,5 @@
 import Header from "./Header"
+import MovieModal from "./MovieModal"
 
 export default function Layout({ children }) {
   return (
@@ -9,7 +10,8 @@ export default function Layout({ children }) {
       {/* Main Content */}
       <main>{children}</main>
 
-      {/* Footer */}
+      {/* Modal */}
+      <MovieModal />
     </div>
   )
 }
