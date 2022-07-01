@@ -43,6 +43,20 @@ const ImageRow = ({ title, fetchUrl }) => {
               width: "100%",
               perMove: 1,
               gap: "20px",
+              breakpoints: {
+                1500: {
+                  perPage: 5,
+                  perMove: 1,
+                },
+                991: {
+                  perPage: 4,
+                  perMove: 1,
+                },
+                600: {
+                  perPage: 2,
+                  perMove: 2,
+                },
+              },
             }}
           >
             <SplideTrack>

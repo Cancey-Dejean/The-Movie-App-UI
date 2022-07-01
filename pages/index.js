@@ -20,7 +20,7 @@ export default function Home() {
       <ContinueWatching />
 
       {/* List */}
-      <div className="pt-[100px] pb-[100px]">
+      <div className="pt-[50px] pb-[50px] md:pt-[100px] md:pb-[100px]">
         <ImageRow title="My List" fetchUrl={requests.fetchTopRated} />
         <ImageRow title="Popular" fetchUrl={requests.fetchNowPlaying} />
         <ImageRow title="Coming soon" fetchUrl={requests.fetchUpcoming} />

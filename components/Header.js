@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { MenuAlt1Icon } from "@heroicons/react/solid"
 
 const Header = () => {
   // State
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    // On Mount
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true)
@@ -22,6 +22,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
   return (
     <header
       className={`${
@@ -30,7 +31,10 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-between wrapper">
-        <ul className="hidden space-x-[30px] md:flex">
+        <button type="button" className="lg:hidden">
+          <MenuAlt1Icon className="w-[30px] h-[30px]" />
+        </button>
+        <ul className="hidden space-x-[30px] lg:flex">
           <li className="menu-item">
             <Link href="/">
               <a className="menu-link">Home</a>
