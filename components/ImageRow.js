@@ -62,7 +62,7 @@ const ImageRow = ({ title, fetchUrl }) => {
             <SplideTrack>
               {movies.map((movie) => (
                 <SplideSlide
-                  className="transform transition duration-[.3s] ease-in-out hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
+                  className="transform transition duration-[.3s] ease-in-out md:hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
                   key={movie.id}
                 >
                   <MovieCard
