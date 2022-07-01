@@ -22,7 +22,7 @@ const ContinueWatching = () => {
   }, []) // Only when mounts
 
   return (
-    <div className="mt-0 md:mt-[250px]">
+    <div className="mt-[100px] md:mt-[250px]">
       <div className="wrapper">
         <h3 className="text-[30px] mt-[70px] md:text-[46px] mb-[50px] md:mb-[30px] font-bold leading-[1.2]">
           Continue Watching
