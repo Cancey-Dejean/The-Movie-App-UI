@@ -29,9 +29,9 @@ const Banner = () => {
   }
 
   return (
-    <section className="h-[65vh] lg:h-[80vh] flex flex-col relative bg-gradient-to-t pb[100px]">
+    <section className="h-[70vh] lg:h-[80vh] flex flex-col relative bg-gradient-to-t pb[100px]">
       <Image
-        src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
         layout="fill"
         priority={true}
         className="absolute top-0 -z-[1] left-0 object-cover"

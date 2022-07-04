@@ -30,12 +30,12 @@ const ContinueWatching = () => {
         <div className="grid  items-start md:text-left md:grid-cols-2 md:items-center md:gap-[50px]">
           <button className="group w-full bg-gradient-to-t">
             <div className="relative">
-              <div className="relative h-[350px] md:h-[450px] lg:h-[550px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)]">
+              <div className="relative h-[350px] md:h-[450px] lg:h-[550px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)] border-transparent">
                 <img
-                  src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                  alt=""
+                  src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+                  alt={movie?.title}
                   loading="lazy"
-                  className="absolute transform scale-1 -z-[1] group-hover:scale-[1.3] h-full w-full object-cover duration-[.8s] ease-in-out"
+                  className="absolute transform scale-1 -z-[1] lg:group-hover:scale-[1.3] h-full w-full object-cover duration-[.8s] ease-in-out"
                 />
                 <div className="absolute h-[25px] bottom-0 left-0 w-full bg-white/30">
                   <div className="w-[50%] rounded-r-[35px] bg-white">
@@ -56,18 +56,18 @@ const ContinueWatching = () => {
             </h3>
 
             <h5 className="bg-[#8400FF] inline-block py-1 px-2 rounded-[3px] mb-[30px] md:mb-6 uppercase">
-              {movie.media_type}
+              {movie?.media_type}
             </h5>
 
             <p className="mb-8 md:mb-6 text-[18px] leading-7">
-              {movie.overview}
+              {movie?.overview}
             </p>
 
             <div className="flex justify-start md:items-center uppercase font-semibold gap-x-2">
               Rating:{" "}
               <span>
                 <h5 className="bg-white text-black p-1 font-bold rounded-[3px]">
-                  ⭐ {movie.vote_average}/10
+                  ⭐ {movie?.vote_average}/10
                 </h5>
               </span>
             </div>

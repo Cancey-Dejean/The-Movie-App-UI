@@ -27,7 +27,7 @@ const ImageRow = ({ title, fetchUrl }) => {
   }
 
   return (
-    <section className="mt-[50px] image-row">
+    <section className="mt-[30px] md:mt-[50px] image-row">
       <div className="wrapper overflow-x-hidden">
         <h4 className="text-[20px] mb-[20px] font-bold leading-[1.2]">
           {title}
@@ -62,7 +62,7 @@ const ImageRow = ({ title, fetchUrl }) => {
             <SplideTrack>
               {movies.map((movie) => (
                 <SplideSlide
-                  className="transform transition duration-[.3s] ease-in-out md:hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
+                  className="transform transition duration-[.3s] ease-in-out lg:hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
                   key={movie.id}
                 >
                   <MovieCard
