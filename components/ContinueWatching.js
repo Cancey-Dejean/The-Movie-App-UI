@@ -30,7 +30,7 @@ const ContinueWatching = () => {
         <div className="grid items-start md:text-left md:grid-cols-2 md:items-center md:gap-[50px]">
           <button className="group w-full bg-gradient-to-t">
             <div className="relative">
-              <div className="relative h-[350px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)] border-transparent md:h-[450px] lg:h-[550px] ">
+              <div className="relative h-[250px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)] border-transparent md:h-[450px] lg:h-[550px] ">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
                   alt={movie?.title}
