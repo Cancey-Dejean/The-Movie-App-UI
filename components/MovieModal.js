@@ -16,10 +16,10 @@ const MovieModal = () => {
                 src="https://cdn.shopify.com/s/files/1/0517/8146/8354/files/placeholder.png?v=1656635030"
                 alt=""
                 loading="lazy"
-                className="max-w-[100px] mx-auto pt-[50px] mb-[30px] md:max-w-[200px] w-full"
+                className="hidden max-w-[100px] xl:block lg:mx-auto md:pt-[50px] md:mb-[30px] md:max-w-[200px] w-full"
               />
 
-              <div className="md:py-[71px] md:px-[50px] text-center md:text-left">
+              <div className="py-[50px] md:py-[71px] md:px-[50px] text-center md:text-left">
                 <h4 className="font-extrabold leading-[1.2] text-[30px] mb-[20px]">
                   Star Wars: The Last Jedi
                 </h4>
@@ -31,7 +31,7 @@ const MovieModal = () => {
                   First Order.
                 </p>
 
-                <div className="justify-center flex pb-[50px] md:justify-start">
+                <div className="justify-center flex md:justify-start">
                   <ButtonGroup
                     primaryText="Play Now"
                     secondaryText="watch list"
