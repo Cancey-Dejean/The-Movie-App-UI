@@ -29,7 +29,7 @@ const Banner = () => {
   }
 
   return (
-    <section className="h-[60vh] lg:h-[80vh] flex flex-col relative bg-gradient-to-t pb[100px]">
+    <section className="h-[60vh] flex flex-col relative bg-gradient-to-t pb[100px] lg:h-[80vh]">
       <Image
         src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
         layout="fill"
@@ -37,19 +37,19 @@ const Banner = () => {
         className="absolute top-0 -z-[1] left-0 object-cover"
       />
       <div className="wrapper">
-        <div className="relative min-h-[600px] lg:min-h-[900px] pt-[150px] lg:pt-[50px] flex flex-col justify-center">
-          <h1 className=" font-black text-[50px] lg:text-[80px] leading-[.9em] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px]">
+        <div className="relative min-h-[600px] pt-[80px] flex flex-col justify-center md:pt-[150px] lg:min-h-[900px] lg:pt-[50px] ">
+          <h1 className=" font-black text-[50px] leading-[.9em] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px] lg:text-[80px]">
             {movie?.title || movie?.name || movie?.orginal_name}
           </h1>
 
-          <p className="text-[18px] lg:text-[20px] leading-7 mb-[41px] max-w-[700px]">
+          <p className="text-[18px] leading-7 mb-[41px] max-w-[700px] lg:text-[20px]">
             {truncate(movie?.overview, 150)}
           </p>
 
           <ButtonGroup primaryText="Play Now" secondaryText="watch list" />
         </div>
 
-        <div className="hidden md:flex gap-x-[20px] lg:gap-x-[50px]">
+        <div className="hidden gap-x-[20px] md:flex lg:gap-x-[50px]">
           <CategoryCard
             categoryImg="https://cdn.shopify.com/s/files/1/0517/8146/8354/files/Toy_Story_4_3500-1200x694.jpg?v=1656445716"
             categoryTitle="Animation"

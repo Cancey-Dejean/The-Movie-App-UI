@@ -24,18 +24,18 @@ const ContinueWatching = () => {
   return (
     <div className="mt-[100px] md:mt-[250px]">
       <div className="wrapper">
-        <h3 className="text-[30px] mt-[70px] md:text-[46px] mb-[50px] md:mb-[30px] font-bold leading-[1.2]">
+        <h3 className="text-[30px] mt-[70px] mb-[50px] md:mb-[30px] font-bold leading-[1.2] md:text-[46px]">
           Continue Watching
         </h3>
-        <div className="grid  items-start md:text-left md:grid-cols-2 md:items-center md:gap-[50px]">
+        <div className="grid items-start md:text-left md:grid-cols-2 md:items-center md:gap-[50px]">
           <button className="group w-full bg-gradient-to-t">
             <div className="relative">
-              <div className="relative h-[350px] md:h-[450px] lg:h-[550px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)] border-transparent">
+              <div className="relative h-[350px] rounded-[25px] overflow-hidden shadow-[0_10px_30px_-15px_rgba(255,255,255,0.3)] border-transparent md:h-[450px] lg:h-[550px] ">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
                   alt={movie?.title}
                   loading="lazy"
-                  className="absolute transform scale-1 -z-[1] lg:group-hover:scale-[1.3] h-full w-full object-cover duration-[.8s] ease-in-out"
+                  className="absolute transform scale-1 -z-[1] h-full w-full object-cover duration-[.8s] ease-in-out lg:group-hover:scale-[1.3]"
                 />
                 <div className="absolute h-[25px] bottom-0 left-0 w-full bg-white/30">
                   <div className="w-[50%] rounded-r-[35px] bg-white">
@@ -51,19 +51,19 @@ const ContinueWatching = () => {
           </button>
 
           <div>
-            <h3 className="text-[32px] md:text-[40px] max-w-[500px] md:max-w-[100%] mt-[30px] mb-[16px] md:mb-4 font-bold leading-[1.2]">
+            <h3 className="text-[32px] font-bold leading-[1.2] max-w-[500px] mt-[30px] mb-[16px] md:text-[40px]  md:max-w-[100%] md:mb-4">
               {movie?.title || movie?.name || movie?.orginal_name}
             </h3>
 
-            <h5 className="bg-[#8400FF] inline-block py-1 px-2 rounded-[3px] mb-[30px] md:mb-6 uppercase">
+            <h5 className="bg-[#8400FF] inline-block py-1 px-2 rounded-[3px] mb-[30px] uppercase md:mb-6 ">
               {movie?.media_type}
             </h5>
 
-            <p className="mb-8 md:mb-6 text-[18px] leading-7">
+            <p className="mb-8 text-[18px] leading-7 md:mb-6">
               {movie?.overview}
             </p>
 
-            <div className="flex justify-start md:items-center uppercase font-semibold gap-x-2">
+            <div className="flex justify-start uppercase font-semibold gap-x-2 md:items-center">
               Rating:{" "}
               <span>
                 <h5 className="bg-white text-black p-1 font-bold rounded-[3px]">
