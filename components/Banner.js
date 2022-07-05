@@ -29,7 +29,7 @@ const Banner = () => {
   }
 
   return (
-    <section className="h-[60vh] flex flex-col relative bg-gradient-to-t pb[100px] lg:h-[80vh]">
+    <section className="flex flex-col relative bg-gradient-to-t pb[100px]">
       <Image
         src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
         layout="fill"
@@ -37,7 +37,7 @@ const Banner = () => {
         className="absolute top-0 -z-[1] left-0 object-cover"
       />
       <div className="wrapper">
-        <div className="relative min-h-[600px] pt-[80px] flex flex-col justify-center md:pt-[150px] lg:min-h-[900px] lg:pt-[50px] ">
+        <div className="relative h-[600px] pt-[80px] flex flex-col justify-center md:pt-[150px] lg:h-[900px] lg:pt-[50px] ">
           <h1 className=" font-black text-[30px] leading-[.9em] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px] lg:text-[80px]">
             {movie?.title || movie?.name || movie?.orginal_name}
           </h1>
