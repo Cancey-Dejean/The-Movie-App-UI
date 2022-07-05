@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
 
       {/* Modal */}
-      <MovieModal />
+      {/* <MovieModal /> */}
     </div>
   )
 }
