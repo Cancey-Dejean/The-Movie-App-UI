@@ -37,7 +37,7 @@ const Banner = () => {
         className="absolute top-0 -z-[1] left-0 object-cover"
       />
       <div className="wrapper">
-        <div className="relative h-screen flex flex-col justify-center md:pt-[150px] lg:h-[900px] lg:pt-[50px] ">
+        <div className="relative pt-[100px] h-[500px] flex flex-col justify-center md:pt-[150px] lg:h-[900px] lg:pt-[50px] ">
           <h1 className=" font-black text-[30px] leading-[1.2] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px] lg:text-[80px]">
             {movie?.title || movie?.name || movie?.orginal_name}
           </h1>
