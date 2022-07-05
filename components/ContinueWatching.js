@@ -22,9 +22,9 @@ const ContinueWatching = () => {
   }, []) // Only when mounts
 
   return (
-    <div className="mt-[100px] md:mt-[250px]">
+    <div className="md:mt-[250px]">
       <div className="wrapper">
-        <h3 className="text-[30px] mt-[70px] mb-[50px] md:mb-[30px] font-bold leading-[1.2] md:text-[46px]">
+        <h3 className="text-[28px] mt-[70px] mb-[50px] md:mb-[30px] font-bold leading-[1.2] md:text-[46px]">
           Continue Watching
         </h3>
         <div className="grid items-start md:text-left md:grid-cols-2 md:items-center md:gap-[50px]">
@@ -51,7 +51,7 @@ const ContinueWatching = () => {
           </button>
 
           <div>
-            <h3 className="text-[32px] font-bold leading-[1.2] max-w-[500px] mt-[30px] mb-[16px] md:text-[40px]  md:max-w-[100%] md:mb-4">
+            <h3 className="text-[28px] font-bold leading-[1.2] max-w-[500px] mt-[30px] mb-[16px] md:text-[40px]  md:max-w-[100%] md:mb-4">
               {movie?.title || movie?.name || movie?.orginal_name}
             </h3>
 
