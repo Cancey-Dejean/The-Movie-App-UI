@@ -31,7 +31,7 @@ const Banner = () => {
   return (
     <section className="flex flex-col relative bg-gradient-to-t pb[100px]">
       <Image
-        src="https://cdn.shopify.com/s/files/1/0517/8146/8354/files/spider-man-doctor-strange-multiverse.jpg?v=1657565941"
+        src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
         layout="fill"
         priority={true}
         className="absolute top-0 -z-[1] left-0 object-cover"
@@ -39,14 +39,11 @@ const Banner = () => {
       <div className="wrapper">
         <div className="relative pt-[100px] h-[500px] flex flex-col justify-center md:pt-[150px] lg:h-[900px] lg:pt-[50px] ">
           <h1 className=" font-black text-[30px] leading-[1.2] -tracking-[1.4px] uppercase text-white max-w-[1031px] mb-[20px] lg:text-[80px]">
-            Doctor Strange in the Multiverse of Madness
+            {movie?.title || movie?.name || movie?.orginal_name}
           </h1>
 
           <p className="text-[18px] leading-7 mb-[41px] max-w-[700px] lg:text-[20px]">
-            {truncate(
-              "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-              150
-            )}
+            {truncate(movie?.overview, 150)}
           </p>
 
           <ButtonGroup primaryText="Play Now" secondaryText="watch list" />

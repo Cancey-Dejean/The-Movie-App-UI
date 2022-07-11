@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "original_title": "Thor",
+    "poster_path": "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/thor.jpg?v=1657564427",
+    "title": "Thor"
+  },
+  {
+    "id": 2,
+    "original_title": "Doctor Strange in the Multiverse of Madness",
+    "poster_path": "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/dstrange.jpg?v=1657564427",
+    "title": "Doctor Strange in the Multiverse of Madness"
+  },
+  {
+    "id": 3,
+    "original_title": "Northman",
+    "poster_path": "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/north.jpg?v=1657565570",
+    "title": "Thor"
+  },
+  {
+    "id": 4,
+    "original_title": "The Black Phone",
+    "poster_path": "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/blackphone.jpg?v=1657566197",
+    "title": "The Black Phone"
+  },
+  {
+    "id": 5,
+    "original_title": "Jurassic World Dominion",
+    "poster_path": "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/jworld.jpg?v=1657566297",
+    "title": "Jurassic World Dominion"
+  }
+]

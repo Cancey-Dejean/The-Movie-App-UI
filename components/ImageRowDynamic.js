@@ -1,10 +1,31 @@
+import { useEffect, useState } from "react"
+import axios from "axios"
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css/core"
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/solid"
 import MovieCard from "./MovieCard"
-import images from "../data/moviesData"
 
-const ImageRow = ({ title }) => {
+const ImageRow = ({ title, fetchUrl }) => {
+  const [movies, setMovies] = useState([])
+  const base_url = "https://image.tmdb.org/t/p/original/"
+
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(fetchUrl)
+      setMovies(request.data.results)
+
+      return request
+    }
+
+    fetchData()
+  }, [fetchUrl])
+
+  // handle click function
+  const handleModal = () => {
+    let body = document.querySelector("body")
+    body.classList.add("modal-open")
+  }
+
   return (
     <section className="mt-[30px] md:mt-[50px] image-row">
       <div className="wrapper overflow-x-hidden">
@@ -39,12 +60,16 @@ const ImageRow = ({ title }) => {
             }}
           >
             <SplideTrack>
-              {images.map((image) => (
+              {movies.map((movie) => (
                 <SplideSlide
-                  className="transform transition duration-[.3s] ease-in-ou bg-gradient-to-t  overflow-hidden"
-                  key={image.id}
+                  className="transform transition duration-[.3s] ease-in-out lg:hover:scale-[1.1] bg-gradient-to-t  overflow-hidden"
+                  key={movie.id}
                 >
-                  <MovieCard img={image.poster_path} alt={image.title} />
+                  <MovieCard
+                    handleModal={handleModal}
+                    movie={movie}
+                    base_url={base_url}
+                  />
                 </SplideSlide>
               ))}
             </SplideTrack>
