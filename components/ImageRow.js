@@ -49,7 +49,7 @@ const ImageRow = ({ title }) => {
               ))}
             </SplideTrack>
 
-            <div className="hidden md:block splide__arrows opacity-0 group-hover:opacity-100 transiton duration-[.7s] ease-in-out">
+            <div className="hidden lg:block splide__arrows opacity-0 group-hover:opacity-100 transiton duration-[.7s] ease-in-out">
               <button className="splide__arrow splide__arrow--prev h-[40px] w-[40px] rounded-[50%] bg-[#8400FF] hover:bg-[#6100BD] transition ease-in-out duration-[.3s] flex justify-center items-center">
                 <ChevronLeftIcon className="text-white" />
               </button>
